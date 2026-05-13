@@ -461,7 +461,7 @@ cli = [
 [[package]]
 name = "mcp-devtools-server"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "gitpython" },
     { name = "mcp", extra = ["cli"] },
