@@ -9,6 +9,7 @@
 ## Error Schema
 
 Every tool that can fail should return on error:
+```json
 {
   "error": {
     "type": "user_error" | "tool_error" | "system_error",
@@ -17,6 +18,7 @@ Every tool that can fail should return on error:
     "details": {...}        // optional structured info
   }
 }
+```
 
 ## 1. code_search
 
@@ -30,6 +32,7 @@ Input:
 - `max_results: int = 50`
 
 Output:
+```json
 {
   "matches": [
     {
@@ -42,6 +45,7 @@ Output:
   ],
   "total_count": 12
 }
+```
 
 Errors: user_error.invalid_repo, tool_error.ripgrep_failed
 
@@ -56,6 +60,7 @@ Input:
 - `since_days: int | None = None`
 
 Output:
+```json
 {
   "commits": [
     {
@@ -67,6 +72,7 @@ Output:
     }
   ]
 }
+```
 
 Errors: user_error.not_a_repo, user_error.file_not_found
 
